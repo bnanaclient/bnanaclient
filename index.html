@@ -47,7 +47,24 @@
         }
 
         .logo::before {
-            content: "";
+            content: "🍌";
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #a3a3a3;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #fbbf24;
         }
 
         /* Hero Section */
@@ -161,103 +178,220 @@
             background-color: #b91c1c;
         }
 
-        /* Features Section */
-        .features {
+        .btn-success {
+            background-color: #16a34a;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #15803d;
+        }
+
+        .terms-link {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #737373;
+        }
+
+        .terms-link a {
+            color: #fbbf24;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .terms-link a:hover {
+            color: #f59e0b;
+        }
+
+        /* Installation Guide */
+        .installation {
             background-color: #1a1a1a;
             padding: 3rem 2rem;
             border-top: 1px solid #262626;
         }
 
-        .features-container {
-            max-width: 1000px;
+        .installation-container {
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .features h2 {
+        .installation h2 {
             color: #fbbf24;
             font-size: 2rem;
             margin-bottom: 2rem;
             text-align: center;
         }
 
-        .modules-grid {
+        .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 1.5rem;
         }
 
-        .module-card {
+        .step {
             background-color: #262626;
             border: 1px solid #404040;
+            border-left: 4px solid #fbbf24;
             padding: 1.5rem;
             border-radius: 0.5rem;
-            text-align: center;
             transition: all 0.2s;
         }
 
-        .module-card:hover {
-            border-color: #fbbf24;
-            transform: translateY(-2px);
+        .step:hover {
+            border-left-width: 6px;
+            transform: translateX(4px);
         }
 
-        .module-name {
+        .step-number {
+            display: inline-block;
+            background-color: #fbbf24;
+            color: #0f0f0f;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .step-content {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 48px);
+        }
+
+        .step-title {
             color: #fbbf24;
             font-weight: 700;
-            font-size: 1.125rem;
             margin-bottom: 0.5rem;
         }
 
-        .module-desc {
+        .step-desc {
+            color: #a3a3a3;
+            font-size: 0.875rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: #0f0f0f;
+            padding: 3rem 2rem;
+            border-top: 1px solid #262626;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq h2 {
+            color: #fbbf24;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .faq-item {
+            background-color: #1a1a1a;
+            border: 1px solid #404040;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e5e5e5;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            color: #fbbf24;
+        }
+
+        .faq-toggle {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: #a3a3a3;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* Changelog Section */
+        .changelog {
+            background-color: #1a1a1a;
+            padding: 3rem 2rem;
+            border-top: 1px solid #262626;
+        }
+
+        .changelog-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .changelog h2 {
+            color: #fbbf24;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .changelog-entry {
+            background-color: #262626;
+            border: 1px solid #404040;
+            border-left: 4px solid #fbbf24;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .changelog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .changelog-version {
+            color: #fbbf24;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .changelog-date {
             color: #737373;
             font-size: 0.875rem;
         }
 
-        /* Terms Section */
-        .terms {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        .terms h2 {
-            color: #fbbf24;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .terms-content {
-            background-color: #1a1a1a;
-            border: 1px solid #404040;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            font-size: 0.875rem;
-            line-height: 1.8;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .terms-content h3 {
-            color: #fbbf24;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .terms-content h3:first-child {
-            margin-top: 0;
-        }
-
-        .terms-content p {
-            margin-bottom: 1rem;
+        .changelog-content {
             color: #a3a3a3;
+            font-size: 0.875rem;
+            white-space: pre-line;
         }
 
-        .terms-content strong {
-            color: #e5e5e5;
+        .no-updates {
+            text-align: center;
+            color: #737373;
+            padding: 2rem;
         }
 
         /* Modal */
@@ -311,6 +445,17 @@
             color: #fbbf24;
         }
 
+        .modal-body h3 {
+            color: #fbbf24;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .modal-body h3:first-child {
+            margin-top: 0;
+        }
+
         .modal-footer {
             padding: 1.5rem;
             border-top: 1px solid #404040;
@@ -325,6 +470,153 @@
             padding: 1rem;
             margin: 1.5rem 0;
             border-radius: 0 0.25rem 0.25rem 0;
+        }
+
+        /* Admin Panel */
+        .admin-trigger {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            background-color: #0f0f0f;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.1;
+            transition: opacity 0.3s;
+        }
+
+        .admin-trigger:hover {
+            opacity: 0.5;
+        }
+
+        .admin-login {
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #fbbf24;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #262626;
+            border: 1px solid #404040;
+            border-radius: 0.5rem;
+            color: #e5e5e5;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #fbbf24;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .admin-panel {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background-color: #262626;
+            border: 1px solid #404040;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            color: #737373;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .admin-section {
+            background-color: #262626;
+            border: 1px solid #404040;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .admin-section h3 {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .update-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .update-item {
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .update-info {
+            flex: 1;
+        }
+
+        .update-version {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .update-date {
+            color: #737373;
+            font-size: 0.875rem;
+        }
+
+        .update-changes {
+            color: #a3a3a3;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
         }
 
         /* Footer */
@@ -355,6 +647,12 @@
             background: #fbbf24;
         }
 
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
         @media (max-width: 640px) {
             .hero h1 {
                 font-size: 2rem;
@@ -377,6 +675,11 @@
     <header>
         <nav>
             <a href="#" class="logo">Bnana Client</a>
+            <div class="nav-links">
+                <a href="#installation">Installation</a>
+                <a href="#faq">FAQ</a>
+                <a href="#changelog">Changelog</a>
+            </div>
             <span style="color: #525252; font-size: 0.875rem;">1.21.4 Fabric</span>
         </nav>
     </header>
@@ -386,9 +689,9 @@
         <h1>Bnana Client</h1>
         <p class="subtitle">A powerful Minecraft cheat client made by Bnana studio</p>
         <p class="update-text">Constantly updated with new bypasses and modules</p>
-        
+
         <div class="button-group">
-            <button class="btn btn-primary" onclick="openModal()">
+            <button class="btn btn-primary" onclick="downloadClient()">
                 Download Bnana Client
             </button>
             <a href="FabricBnana.jar" download="FabricBnana.jar" class="btn btn-secondary">
@@ -399,84 +702,151 @@
                 Discord
             </a>
         </div>
-    </section>
 
-    <section class="features">
-        <div class="features-container">
-            <h2>Modules</h2>
-            <div class="modules-grid">
-                <div class="module-card">
-                    <div class="module-name">BreachSwap</div>
-                    <div class="module-desc">Auto crystal pvp</div>
-                </div>
-                <div class="module-card">
-                    <div class="module-name">Chunk Finder</div>
-                    <div class="module-desc">Locate base chunks</div>
-                </div>
-                <div class="module-card">
-                    <div class="module-name">AutoCrystal</div>
-                    <div class="module-desc">Automated crystal aura</div>
-                </div>
-                <div class="module-card">
-                    <div class="module-name">AnchorMacro</div>
-                    <div class="module-desc">Respawn anchor abuse</div>
-                </div>
-                <div class="module-card">
-                    <div class="module-name">HoverTotem</div>
-                    <div class="module-desc">Auto totem swap</div>
-                </div>
-                <div class="module-card">
-                    <div class="module-name">+ Many More</div>
-                    <div class="module-desc">Always expanding</div>
-                </div>
-            </div>
-            <p style="text-align: center; color: #737373; font-size: 0.875rem;">
-                And many more modules being added with every update
-            </p>
+        <div class="terms-link">
+            <a onclick="openTermsModal()">Terms of Service</a>
         </div>
     </section>
 
-    <section class="terms">
-        <h2>Terms of Service & Disclaimer</h2>
-        <div class="terms-content">
-            <h3>Not Affiliated with Mojang/Microsoft</h3>
-            <p>Bnana Client is a third-party modification that violates the Minecraft EULA. We are not affiliated with Mojang Studios or Microsoft. Use at your own risk.</p>
+    <section class="installation" id="installation">
+        <div class="installation-container">
+            <h2>Quick Installation Guide</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <div class="step-title">Download Fabric Loader</div>
+                        <div class="step-desc">Visit the official Fabric website and download the installer for Minecraft 1.21.4</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <div class="step-title">Install Fabric API</div>
+                        <div class="step-desc">Download Fabric API from the button above and place it in your mods folder</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <div class="step-title">Download Bnana Client</div>
+                        <div class="step-desc">Click the download button, accept the terms, and save BNANACLIENT.jar</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <div class="step-content">
+                        <div class="step-title">Place in Mods Folder</div>
+                        <div class="step-desc">Move BNANACLIENT.jar to your .minecraft/mods folder</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <div class="step-content">
+                        <div class="step-title">Launch & Enjoy</div>
+                        <div class="step-desc">Start Minecraft with the Fabric profile and press Right Shift to open the menu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h3>No Malware / Not a RAT</h3>
-            <p>Bnana Client is NOT a Remote Access Trojan, stealer, keylogger, or any form of malware. You are encouraged to scan the file using any trusted service such as VirusTotal. We provide a public RAT scanner in our Discord server—use <strong>/jar-scanner</strong> to verify the file yourself.</p>
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is Bnana Client a virus or RAT?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No! Bnana Client is NOT a virus, RAT, stealer, or any form of malware. You can scan it with VirusTotal or use our Discord bot command /jar-scanner to verify it yourself. We take security seriously and would never compromise our users' safety.
+                    </div>
+                </div>
+            </div>
 
-            <h3>No Liability for Bans</h3>
-            <p>This client is explicitly designed for anarchy servers and is <strong>NOT ALLOWED</strong> on most multiplayer servers. We assume ZERO responsibility for any bans, punishments, account terminations, HWID locks, IP bans, or any other consequences resulting from use. All consequences are solely your responsibility.</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Will I get banned for using this?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, this is a cheat client and can get you banned on most servers. This client is designed for anarchy servers where cheating is allowed. Using it on other servers WILL result in bans. We are not responsible for any consequences. Our team works continuously on bypasses and updates to make it as undetectable as possible, but nothing is 100% safe. Always check server rules before using any client.
+                    </div>
+                </div>
+            </div>
 
-            <h3>Provided "As Is"</h3>
-            <p>The software is provided without warranty of any kind. We do not guarantee undetectability, future updates, bug fixes, or that the client will remain safe to use indefinitely. Anticheat systems update frequently—use at your own risk.</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I open the clickGUI menu?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Press Right Shift to open the clickGUI menu. From there you can enable/disable modules, configure settings, and customize your experience. You can also rebind this key in the settings menu.
+                    </div>
+                </div>
+            </div>
 
-            <h3>Undetectability Efforts</h3>
-            <p>Our development team works continuously on bypasses and updates to minimize detection risk. However, nothing is 100% undetectable, and you may still receive bans despite our efforts.</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is this client free?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! Bnana Client is 100% FREE and always will be. We will NEVER ask for payment. Anyone asking you to pay for this client is a scammer. Optional early access to new builds is available for users with 10+ verified Discord invites, but the core client remains free for everyone.
+                    </div>
+                </div>
+            </div>
 
-            <h3>User Responsibilities</h3>
-            <p>You are responsible for securing your accounts, backing up data, and ensuring you only download from official sources. Never download Bnana Client from unofficial websites or Discord servers.</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What Minecraft version is supported?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Currently, Bnana Client supports Minecraft 1.21.4 with Fabric loader. We regularly update to support the latest Minecraft versions. Check our Discord or changelog for version updates.
+                    </div>
+                </div>
+            </div>
 
-            <h3>Official Distribution Only</h3>
-            <p>This is the ONLY official source for Bnana Client. Any other websites, Discord servers, or download links claiming to be us are fake and likely contain malware. The client is <strong>100% FREE</strong>—we will never ask for payment.</p>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Where can I get support?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Join our Discord server! We have a helpful community and dedicated support channels. Our community is always ready to help with installation issues, configuration questions, or any other problems you might encounter.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h3>Community Rules</h3>
-            <p>No doxxing, threats, scamming, advertising, begging, toxicity, or redistributing the client without permission.</p>
-
-            <h3>Early Access</h3>
-            <p>Optional early access to new builds is available to users with 10+ verified invites. This is completely free ($0). The core client remains free for all users regardless of invite status.</p>
-
-            <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #404040; color: #fbbf24;">
-                <strong>By downloading or using Bnana Client, you agree to these terms. If you do not agree, do not use this software.</strong>
-            </p>
+    <section class="changelog" id="changelog">
+        <div class="changelog-container">
+            <h2>Recent Updates</h2>
+            <div id="changelogList">
+                <div class="no-updates">No updates yet. Check back soon!</div>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>Bnana Client © 2026 · Not affiliated with Mojang or Microsoft · Use at your own risk</p>
+        <p style="margin-top: 0.5rem; color: #737373;">Made with 🍌 by Bnana Studio</p>
     </footer>
 
-    <!-- Modal -->
+    <!-- Admin Trigger -->
+    <div class="admin-trigger" onclick="openAdminLogin()"></div>
+
+    <!-- Download Disclaimer Modal -->
     <div class="modal-overlay" id="disclaimerModal">
         <div class="modal">
             <div class="modal-header">
@@ -496,26 +866,227 @@
                 <p style="color: #fbbf24; font-weight: 600;">Download and use at your own risk.</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" onclick="closeModal()">Deny</button>
+                <button class="btn btn-danger" onclick="closeModal('disclaimerModal')">Deny</button>
                 <button class="btn btn-primary" onclick="agreeDownload()">Agree & Download</button>
             </div>
         </div>
     </div>
 
+    <!-- Terms of Service Modal -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal">
+            <div class="modal-header">
+                Terms of Service & Disclaimer
+            </div>
+            <div class="modal-body">
+                <h3>Not Affiliated with Mojang/Microsoft</h3>
+                <p>Bnana Client is a third-party modification that violates the Minecraft EULA. We are not affiliated with Mojang Studios or Microsoft. Use at your own risk.</p>
+
+                <h3>No Malware / Not a RAT</h3>
+                <p>Bnana Client is NOT a Remote Access Trojan, stealer, keylogger, or any form of malware. You are encouraged to scan the file using any trusted service such as VirusTotal. We provide a public RAT scanner in our Discord server—use <strong>/jar-scanner</strong> to verify the file yourself.</p>
+
+                <h3>No Liability for Bans</h3>
+                <p>This client is explicitly designed for anarchy servers and is <strong>NOT ALLOWED</strong> on most multiplayer servers. We assume ZERO responsibility for any bans, punishments, account terminations, HWID locks, IP bans, or any other consequences resulting from use. All consequences are solely your responsibility.</p>
+
+                <h3>Provided "As Is"</h3>
+                <p>The software is provided without warranty of any kind. We do not guarantee undetectability, future updates, bug fixes, or that the client will remain safe to use indefinitely. Anticheat systems update frequently—use at your own risk.</p>
+
+                <h3>Undetectability Efforts</h3>
+                <p>Our development team works continuously on bypasses and updates to minimize detection risk. However, nothing is 100% undetectable, and you may still receive bans despite our efforts.</p>
+
+                <h3>User Responsibilities</h3>
+                <p>You are responsible for securing your accounts, backing up data, and ensuring you only download from official sources. Never download Bnana Client from unofficial websites or Discord servers.</p>
+
+                <h3>Official Distribution Only</h3>
+                <p>This is the ONLY official source for Bnana Client. Any other websites, Discord servers, or download links claiming to be us are fake and likely contain malware. The client is <strong>100% FREE</strong>—we will never ask for payment.</p>
+
+                <h3>Community Rules</h3>
+                <p>No doxxing, threats, scamming, advertising, begging, toxicity, or redistributing the client without permission.</p>
+
+                <h3>Early Access</h3>
+                <p>Optional early access to new builds is available to users with 10+ verified invites. This is completely free ($0). The core client remains free for all users regardless of invite status.</p>
+
+                <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #404040; color: #fbbf24;">
+                    <strong>By downloading or using Bnana Client, you agree to these terms. If you do not agree, do not use this software.</strong>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('termsModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal-overlay" id="adminLoginModal">
+        <div class="modal admin-login">
+            <div class="modal-header">
+                Admin Login
+            </div>
+            <div class="modal-body">
+                <form id="adminLoginForm" onsubmit="return adminLogin(event)">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="adminUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="adminPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Secret</label>
+                        <input type="password" id="adminSecret" required>
+                    </div>
+                    <div id="loginError" class="error-message" style="display: none;"></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeModal('adminLoginModal')">Cancel</button>
+                <button class="btn btn-primary" onclick="document.getElementById('adminLoginForm').requestSubmit()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-overlay" id="adminPanelModal">
+        <div class="modal admin-panel">
+            <div class="modal-header">
+                Admin Panel
+            </div>
+            <div class="modal-body">
+                <div class="admin-stats">
+                    <div class="stat-box">
+                        <div class="stat-value" id="totalViews">0</div>
+                        <div class="stat-label">Unique Views</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="totalDownloads">0</div>
+                        <div class="stat-label">Unique Downloads</div>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Add New Update</h3>
+                    <form id="addUpdateForm" onsubmit="return addUpdate(event)">
+                        <div class="form-group">
+                            <label>Version</label>
+                            <input type="text" id="updateVersion" placeholder="v2.4.0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="text" id="updateDate" placeholder="Feb 1, 2026" required>
+                        </div>
+                        <div class="form-group">
+                            <label>What Changed</label>
+                            <textarea id="updateChanges" placeholder="Describe what changed in this update..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Add Update</button>
+                    </form>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Existing Updates</h3>
+                    <div class="update-list" id="adminUpdateList">
+                        <div class="no-updates">No updates yet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeAdminPanel()">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function openModal() {
-            document.getElementById('disclaimerModal').style.display = 'flex';
+        // Admin credentials
+        const ADMIN_CREDENTIALS = {
+            username: 'bnwf23obnf',
+            password: '54876hgr@jgefgefge',
+            secret: 'washedisgay'
+        };
+
+        // Initialize data
+        let analytics = {
+            views: new Set(),
+            downloads: new Set()
+        };
+
+        let updates = [];
+
+        // Load data from localStorage
+        function loadData() {
+            const savedAnalytics = localStorage.getItem('bnana_analytics');
+            if (savedAnalytics) {
+                const parsed = JSON.parse(savedAnalytics);
+                analytics.views = new Set(parsed.views);
+                analytics.downloads = new Set(parsed.downloads);
+            }
+
+            const savedUpdates = localStorage.getItem('bnana_updates');
+            if (savedUpdates) {
+                updates = JSON.parse(savedUpdates);
+                renderChangelog();
+            }
+
+            // Track unique view
+            const fingerprint = getFingerprint();
+            analytics.views.add(fingerprint);
+            saveAnalytics();
+        }
+
+        // Save analytics
+        function saveAnalytics() {
+            localStorage.setItem('bnana_analytics', JSON.stringify({
+                views: Array.from(analytics.views),
+                downloads: Array.from(analytics.downloads)
+            }));
+        }
+
+        // Save updates
+        function saveUpdates() {
+            localStorage.setItem('bnana_updates', JSON.stringify(updates));
+        }
+
+        // Generate fingerprint (simple version)
+        function getFingerprint() {
+            const screen = window.screen;
+            const nav = window.navigator;
+            return btoa(
+                screen.width + screen.height +
+                nav.userAgent +
+                nav.language +
+                (nav.hardwareConcurrency || 0)
+            );
+        }
+
+        // Modal functions
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
-        function closeModal() {
-            document.getElementById('disclaimerModal').style.display = 'none';
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
+        function openTermsModal() {
+            openModal('termsModal');
+        }
+
+        function downloadClient() {
+            openModal('disclaimerModal');
+        }
+
         function agreeDownload() {
-            closeModal();
-            var link = document.createElement('a');
+            closeModal('disclaimerModal');
+            
+            // Track unique download
+            const fingerprint = getFingerprint();
+            analytics.downloads.add(fingerprint);
+            saveAnalytics();
+            
+            // Trigger download
+            const link = document.createElement('a');
             link.href = 'BNANACLIENT.jar';
             link.download = 'BNANACLIENT.jar';
             document.body.appendChild(link);
@@ -523,21 +1094,170 @@
             document.body.removeChild(link);
         }
 
-        // Close modal when clicking outside
-        document.getElementById('disclaimerModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
+        // Admin functions
+        function openAdminLogin() {
+            openModal('adminLoginModal');
+        }
+
+        function adminLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            const secret = document.getElementById('adminSecret').value;
+            const errorEl = document.getElementById('loginError');
+
+            if (username === ADMIN_CREDENTIALS.username && 
+                password === ADMIN_CREDENTIALS.password && 
+                secret === ADMIN_CREDENTIALS.secret) {
+                closeModal('adminLoginModal');
+                openAdminPanel();
+                errorEl.style.display = 'none';
+            } else {
+                errorEl.textContent = 'Invalid credentials';
+                errorEl.style.display = 'block';
+            }
+
+            return false;
+        }
+
+        function openAdminPanel() {
+            document.getElementById('totalViews').textContent = analytics.views.size;
+            document.getElementById('totalDownloads').textContent = analytics.downloads.size;
+            renderAdminUpdates();
+            openModal('adminPanelModal');
+        }
+
+        function closeAdminPanel() {
+            closeModal('adminPanelModal');
+            document.getElementById('adminLoginForm').reset();
+        }
+
+        function addUpdate(event) {
+            event.preventDefault();
+
+            const version = document.getElementById('updateVersion').value;
+            const date = document.getElementById('updateDate').value;
+            const changes = document.getElementById('updateChanges').value;
+
+            updates.unshift({
+                id: Date.now(),
+                version,
+                date,
+                changes
+            });
+
+            saveUpdates();
+            renderChangelog();
+            renderAdminUpdates();
+            
+            document.getElementById('addUpdateForm').reset();
+
+            return false;
+        }
+
+        function deleteUpdate(id) {
+            if (confirm('Are you sure you want to delete this update?')) {
+                updates = updates.filter(u => u.id !== id);
+                saveUpdates();
+                renderChangelog();
+                renderAdminUpdates();
+            }
+        }
+
+        function renderChangelog() {
+            const container = document.getElementById('changelogList');
+            
+            if (updates.length === 0) {
+                container.innerHTML = '<div class="no-updates">No updates yet. Check back soon!</div>';
+                return;
+            }
+
+            container.innerHTML = updates.map(update => `
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <span class="changelog-version">${update.version}</span>
+                        <span class="changelog-date">${update.date}</span>
+                    </div>
+                    <div class="changelog-content">${update.changes}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderAdminUpdates() {
+            const container = document.getElementById('adminUpdateList');
+            
+            if (updates.length === 0) {
+                container.innerHTML = '<div class="no-updates">No updates yet</div>';
+                return;
+            }
+
+            container.innerHTML = updates.map(update => `
+                <div class="update-item">
+                    <div class="update-info">
+                        <div class="update-version">${update.version}</div>
+                        <div class="update-date">${update.date}</div>
+                        <div class="update-changes">${update.changes}</div>
+                    </div>
+                    <button class="btn btn-danger btn-small" onclick="deleteUpdate(${update.id})">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.maxHeight = '0';
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+
+        // Close modals when clicking outside
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                    overlay.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
             }
         });
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', loadData);
     </script>
 
 </body>
-
 </html>
